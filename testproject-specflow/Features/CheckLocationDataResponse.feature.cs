@@ -102,7 +102,7 @@ namespace testproject_specflow.Features
 #line 13
   testRunner.When("I request the locations corresponding to these codes", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 14
-  testRunner.Then("the response contains exactly 1 location", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+  testRunner.Then("the response contains exactly 2 location", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
