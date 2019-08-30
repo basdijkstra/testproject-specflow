@@ -36,7 +36,7 @@ namespace testproject_specflow.StepDefinitions
             Assert.That(locationResponse.Places[0].PlaceName, Is.EqualTo(expectedPlaceName));
         }
         
-        [Then(@"the response contains exactly (\d+) location")]
+        [Then(@"the response contains exactly (\d+) locations?")]
         public void ThenTheResponseContainsExactlyLocation(int expectedNumberOfPlacesReturned)
         {
             LocationResponse locationResponse =
@@ -46,7 +46,7 @@ namespace testproject_specflow.StepDefinitions
             Assert.That(locationResponse.Places.Count, Is.EqualTo(expectedNumberOfPlacesReturned));
         }
         
-        [Then(@"the response has status code (\d+)")]
+        [Then(@"the response has status code (200|404|500)")]
         public void ThenTheResponseHasStatusCode(int expectedStatusCode)
         {
             Assert.That((int)response.StatusCode, Is.EqualTo(expectedStatusCode));

@@ -17,4 +17,3 @@
 		Given the country code us and zip code 90210
 		When I request the locations corresponding to these codes
 		Then the response has status code 200
-
