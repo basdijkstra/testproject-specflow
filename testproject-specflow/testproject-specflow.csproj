@@ -84,7 +84,10 @@
     <Compile Include="StepDefinitions\ReturningLocationDataBasedOnCountryAndZipCodeSteps.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Features\BackgroundExample.feature" />
     <None Include="Features\CheckLocationDataResponse.feature" />
+    <None Include="Features\ScenarioOutlineExample.feature" />
+    <None Include="Features\SpecFlowAssistExample.feature" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup />

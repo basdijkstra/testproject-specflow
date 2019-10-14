@@ -18,20 +18,20 @@ namespace testproject_specflow.Features
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.0.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("Returning location data based on country and zip code")]
-    public partial class ReturningLocationDataBasedOnCountryAndZipCodeFeature
+    [NUnit.Framework.DescriptionAttribute("Scenario Outline example")]
+    public partial class ScenarioOutlineExampleFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
-#line 1 "CheckLocationDataResponse.feature"
+#line 1 "ScenarioOutlineExample.feature"
 #line hidden
         
         [NUnit.Framework.OneTimeSetUpAttribute()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Returning location data based on country and zip code", "\tAs a consumer of the Zippopotam.us API\r\n\tI want to receive location data matchin" +
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Scenario Outline example", "\tAs a consumer of the Zippopotam.us API\r\n\tI want to receive location data matchin" +
                     "g the country code and zip code I supply\r\n\tSo I can use this data to auto-comple" +
                     "te forms on my web site", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
@@ -72,10 +72,10 @@ namespace testproject_specflow.Features
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("An existing country and zip code yields the correct place name")]
-        public virtual void AnExistingCountryAndZipCodeYieldsTheCorrectPlaceName()
+        [NUnit.Framework.DescriptionAttribute("Country code us and zip code 90210 yields Beverly Hills")]
+        public virtual void CountryCodeUsAndZipCode90210YieldsBeverlyHills()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("An existing country and zip code yields the correct place name", null, ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Country code us and zip code 90210 yields Beverly Hills", null, ((string[])(null)));
 #line 6
  this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
@@ -90,37 +90,58 @@ namespace testproject_specflow.Features
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("An existing country and zip code yields the right number of results")]
-        public virtual void AnExistingCountryAndZipCodeYieldsTheRightNumberOfResults()
+        [NUnit.Framework.DescriptionAttribute("Country code fi and zip code 99999 yields Korvatunturi")]
+        public virtual void CountryCodeFiAndZipCode99999YieldsKorvatunturi()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("An existing country and zip code yields the right number of results", null, ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Country code fi and zip code 99999 yields Korvatunturi", null, ((string[])(null)));
 #line 11
  this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 12
-  testRunner.Given("the country code us and zip code 90210", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+  testRunner.Given("the country code fi and zip code 99999", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 13
   testRunner.When("I request the locations corresponding to these codes", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 14
-  testRunner.Then("the response contains exactly 1 location", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+  testRunner.Then("the response contains the place name Korvatunturi", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("An existing country and zip code yields the right HTTP status code")]
-        public virtual void AnExistingCountryAndZipCodeYieldsTheRightHTTPStatusCode()
+        [NUnit.Framework.DescriptionAttribute("Country code ca and zip code B2A yields North Sydney South Central")]
+        public virtual void CountryCodeCaAndZipCodeB2AYieldsNorthSydneySouthCentral()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("An existing country and zip code yields the right HTTP status code", null, ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Country code ca and zip code B2A yields North Sydney South Central", null, ((string[])(null)));
 #line 16
  this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 17
-  testRunner.Given("the country code us and zip code 90210", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+  testRunner.Given("the country code ca and zip code B2A", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 18
   testRunner.When("I request the locations corresponding to these codes", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 19
-  testRunner.Then("the response has status code 200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+  testRunner.Then("the response contains the place name North Sydney South Central", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Country code and zip code combinations yield the expected place names")]
+        [NUnit.Framework.TestCaseAttribute("us", "90210", "Beverly Hills", null)]
+        [NUnit.Framework.TestCaseAttribute("fi", "99999", "Korvatunturi", null)]
+        [NUnit.Framework.TestCaseAttribute("ca", "B2A", "North Sydney South Central", null)]
+        public virtual void CountryCodeAndZipCodeCombinationsYieldTheExpectedPlaceNames(string countryCode, string zipCode, string expectedPlaceName, string[] exampleTags)
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Country code and zip code combinations yield the expected place names", null, exampleTags);
+#line 21
+ this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 22
+  testRunner.Given(string.Format("the country code {0} and zip code {1}", countryCode, zipCode), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 23
+  testRunner.When("I request the locations corresponding to these codes", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 24
+  testRunner.Then(string.Format("the response contains the place name {0}", expectedPlaceName), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
