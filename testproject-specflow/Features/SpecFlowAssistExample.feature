@@ -16,7 +16,7 @@
 		Then the response contains the following places
 		| PlaceName      | Longitude | Latitude |
 		| Alt Bennebek   | 9.4333    | 54.3833  |
-		| Klein Rheide   | 9.4833    | 54.45    |
 		| Kropp          | 9.5087    | 54.4111  |
+		| Klein Rheide   | 9.4833    | 54.45    |
 		| Klein Bennebek | 9.45      | 54.4     |
 

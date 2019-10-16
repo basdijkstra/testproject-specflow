@@ -124,13 +124,13 @@ namespace testproject_specflow.Features
                         "9.4333",
                         "54.3833"});
             table2.AddRow(new string[] {
-                        "Klein Rheide",
-                        "9.4833",
-                        "54.45"});
-            table2.AddRow(new string[] {
                         "Kropp",
                         "9.5087",
                         "54.4111"});
+            table2.AddRow(new string[] {
+                        "Klein Rheide",
+                        "9.4833",
+                        "54.45"});
             table2.AddRow(new string[] {
                         "Klein Bennebek",
                         "9.45",
